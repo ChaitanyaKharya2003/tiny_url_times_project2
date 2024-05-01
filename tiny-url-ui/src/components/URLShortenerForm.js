@@ -9,7 +9,7 @@ const URLShortenerForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:3000/shorten?longURL=${longURL}`);
+            const response = await axios.get(`http://localhost:3005/shorten?longURL=${longURL}`);
             console.log(longURL);
             setShortenedURL(response.data);
         } catch (error) {
